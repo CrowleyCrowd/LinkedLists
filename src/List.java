@@ -2,11 +2,18 @@ public class List {
     private Node first;
     private Node last;
     
+    /**
+     * Define an empty list
+     */
     public List() {
         this.first = null;
         this.last = null;
     }
 
+    /**
+     * Add first node
+     * @param info
+     */
     public void unshift (int info) {
         Node newNode = new Node(info);
         if(this.isEmpty()) {
@@ -18,6 +25,10 @@ public class List {
         }
     }
 
+    /**
+     * Add last node
+     * @param info
+     */
     public void push (int info) {
         Node newNode = new Node(info);
         if(first == null) {
@@ -31,10 +42,19 @@ public class List {
         }
     }
 
+    /**
+     * Check  for an empty node
+     * @return
+     */
     public boolean isEmpty() {
         return this.first == null;
     }
 
+    /**
+     * Search in node
+     * @param info
+     * @return
+     */
     public boolean search(int info) {
         Node p = first;
         while(p.getLink() != null) {
@@ -46,6 +66,10 @@ public class List {
         return false;
     }
 
+    /**
+     * Delete first node
+     * @return
+     */
     public boolean shift() {
         if (this.isEmpty()) {
             return false;
@@ -62,6 +86,10 @@ public class List {
         return true;
     }
 
+    /**
+     * Delete last node
+     * @return
+     */
     public boolean pop() {
         if (this.isEmpty()) {
             return false;
@@ -83,6 +111,10 @@ public class List {
         return true;
     }
 
+    /**
+     * Print List
+     * @return
+     */
     public String print() {
         String str = "";
         Node p = this.first;

@@ -69,7 +69,7 @@ public class App {
     }
     
     /**
-     * 
+     * Add first node
      */
     public void unshiftNode() {
         System.out.println("Ingrese el valor a ingresar");
@@ -78,6 +78,9 @@ public class App {
         System.out.println(this.lst.print());
     }
 
+    /**
+     * Add last node
+     */
     public void pushNode() {
         System.out.println("Ingrese el valor a ingresar");
         valueEntered = this.sc.nextInt();
@@ -85,6 +88,9 @@ public class App {
         System.out.println(this.lst.print());
     }
 
+    /**
+     * Search data in node
+     */
     public void searchNode() {
         int n = 0;
         System.out.println("Ingresa el valor que deseas buscar");
@@ -97,6 +103,9 @@ public class App {
         System.out.println(this.lst.print());
     }
 
+    /**
+     * Delete first node
+     */
     public void shiftNode() {
         if (this.lst.shift()) {
             System.out.println("El nodo se ha eliminado de forma satisfactoria");
@@ -106,6 +115,9 @@ public class App {
         System.out.println(this.lst.print());
     }
 
+    /**
+     * Delete last node
+     */
     public void popNode() {
         if (this.lst.pop()) {
             System.out.println("El nodo se ha eliminado de forma satisfactoria");
@@ -115,6 +127,11 @@ public class App {
         System.out.println(this.lst.print());
     }
 
+    /**
+     * Main Method
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         App list = new App();
         list.displayMenu();

@@ -2,6 +2,10 @@ public class Node {
     private int info;
     private Node link; //Linea autoreferenciada de la clase
 
+    /*
+     * Node Class
+     */
+
     public Node () {
      this.info = 0;
      this.link = null;   
